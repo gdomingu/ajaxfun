@@ -1,0 +1,26 @@
+<%= form_for(@weather,  :remote => true) do |f|%>
+  <% if @weather.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@weather.errors.count, "error") %> prohibited this weather from being saved:</h2>
+
+      <ul>
+      <% @weather.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lat %><br />
+    <%= f.number_field :lat %>
+  </div>
+  <div class="field">
+    <%= f.label :long %><br />
+    <%= f.number_field :long %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

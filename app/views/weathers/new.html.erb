@@ -1,0 +1,24 @@
+<h1>Delicious ajax from scratch, just like your momma used to make!</h1>
+<div id="wrapper">
+
+  <div id="all_form">
+    <div id="accordion">
+      <h2>Destination</h2>
+      <%= render 'form' %>
+
+      <h2>Enter a number</h2>
+      <%= render :partial => 'number_form' %>
+
+      <h2>Enter a name</h2>
+      <%= render :partial => 'name_joke' %>
+    </div>
+
+    <%= link_to 'Back', weathers_path %>
+  </div>
+
+  <div id="results">
+    <h2>Results</h2>
+    <ul id="result"></ul>
+  </div>
+</div>
+
